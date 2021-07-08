@@ -85,8 +85,14 @@ def task3(answer_key, contents, error_line):
     print("Range of scores: ", max(match) - min(match))
     print("Median score: ", find_median(match))
 
-def task4():
-    pass
+    return match
+
+def task4(file_name, match, contents):
+    score_lst = match
+    ID_lst = [ID[:9] for ID in contents]
+    with open(file_name + "_grades.txt", "w") as save:
+        for i in range(len(score_lst)):
+            save.write(ID_lst[i] + "," + str(score_lst[i]) + "\n")
 
 def main():
     # run task 1
@@ -99,15 +105,10 @@ def main():
 
     # run task 3 từ đáp án đúng và nội dung và những dòng ko đúng định dạng từ task2
     answer_key = "B,A,D,D,C,B,D,A,C,C,D,B,A,B,A,C,B,D,A,C,A,A,B,D,D"
-    task3(answer_key, contents, error_line)
+    match = task3(answer_key, contents, error_line)
 
     # run task 4
-    task4()
-
-
+    task4(file_name, match, contents)
     f.close()
 
-
 main()
-
-
