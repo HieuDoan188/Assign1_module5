@@ -11,3 +11,4 @@ tôi muốn chương trình này càng “chung chung” càng tốt). Bạn s�
 này của chương trình nếu bạn viết một cái gì đó như sau để xác định các tệp dữ liệu hợp lệ:
 """
 
+input("Nhập vào cái j đó di")
